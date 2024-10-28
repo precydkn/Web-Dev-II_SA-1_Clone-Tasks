@@ -1,0 +1,202 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Teko:wght@300..700&display=swap"); /*Teko font*/
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"); /*Lato font*/
+/*==========Formats common to all screen sizes==========*/
+body {
+  margin: 0;
+  background-color: #231651; /*#e9e9e9*/
+  font-family: "Lato", sans-serif;
+}
+
+/*==========NAVBAR==========*/
+nav,
+h2 {
+  font-family: "Teko", sans-serif;
+} /*Teko font for navbar and headings*/
+nav {
+  background-color: #070410;
+  display: flex;
+  align-items: center;
+  padding: 16px;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+}
+
+nav button {
+  padding: 0 16px;
+}
+
+nav a:hover {
+  color: #4DCCBD;
+} /*link color when hovered on*/
+nav button:hover {
+  background-color: #4DCCBD;
+  color: #EEF36A;
+}
+
+nav a:active {
+  color: #EEF36A;
+} /*link color when clicked*/
+button {
+  font-family: "Teko", sans-serif;
+  border-radius: 16px;
+}
+
+/*==========MAIN (movies)==========*/
+main {
+  gap: 16px;
+  margin: 16px auto;
+}
+
+main img {
+  width: 100%;
+}
+
+.movie-box {
+  font-size: 1.5em;
+  background-color: #4DCCBD;
+  border: 1px solid #070410;
+}
+
+h2 {
+  margin: -5px 0 -30px;
+} /*lessen top/bot space*/
+.desc-container {
+  padding: 16px;
+}
+
+.desc-container button {
+  font-size: 2em;
+  padding: 16px;
+  width: 100%;
+}
+
+.desc-container button:hover {
+  background-color: #EEF36A;
+  color: #231651;
+}
+
+/*ensure the buttons are at the bottom of div
+.m2 .movie-box {
+    display: flex;
+    flex-direction: column;
+}*/
+.m2 .movie-box,
+.m2 .desc-container,
+.mov23-box,
+#mov2 .desc-container,
+#mov3 .desc-container,
+.m3 .desc-container {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.m2 .desc-container button,
+#mov2 button,
+#mov3 button,
+.m3 .desc-container button {
+  margin-top: auto;
+}
+
+/*==========Formats exclusive to each MQs==========*/
+/*Small Mobile | 360px-540px (standard spacing: 16px)*/
+@media (max-width: 720px) {
+  nav {
+    justify-content: space-between;
+  }
+  nav div:first-child,
+  nav div:last-child button {
+    font-size: 3em;
+  }
+  nav .genre {
+    display: none;
+  }
+  main {
+    display: flex;
+    flex-direction: column;
+  }
+  .m1, .movie-box {
+    display: block;
+  }
+  .m2 {
+    display: none;
+  }
+}
+/*Tablet | 720px-1024px (standard spacing: 32px)*/
+@media (min-width: 720px) {
+  nav {
+    display: grid;
+    grid-template-columns: auto 50% auto;
+    box-shadow: 0 6px white;
+  } /*equally divide spaces for watch.it, nav links, & button*/
+  nav .genre {
+    display: flex;
+    justify-content: space-between;
+  }
+  nav div:first-child,
+  nav div:last-child button {
+    font-size: 3em;
+  } /*big font-size for watch.it and button*/
+  nav div:last-child {
+    text-align: right;
+  } /*right align button*/
+  .m2 {
+    display: none;
+  }
+  main {
+    padding: 16px;
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+  .movie-box {
+    box-shadow: 6px 6px #EEF36A;
+  }
+}
+/*Desktop | 1024px+ (large spacing: 48px)*/
+@media (min-width: 1024px) {
+  nav {
+    justify-content: space-between;
+  }
+  nav .genre {
+    justify-content: space-evenly;
+  }
+  main {
+    max-width: 900px;
+    display: flex;
+    flex-direction: column;
+  }
+  main img {
+    height: 100%;
+  }
+  /*movie 1*/
+  .m1 img {
+    height: 300px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: 0 -35px;
+       object-position: 0 -35px;
+  } /*crop movie poster and move it so title is better seen*/
+  .m1 .desc-container {
+    display: grid;
+    grid-template-columns: 75% 25%;
+    padding: 16px;
+  } /*put movie info & button side by side*/
+  .m1 span {
+    display: block;
+  }
+  /*m2 (two movies container) + m3 grid format*/
+  .m2,
+  .m3 {
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+  .m2 {
+    gap: 16px;
+  } /*space between the side by side movies*/
+  #mov2, #mov3 {
+    display: none;
+  } /*hide ungrouped mov2 & mov3*/
+}/*# sourceMappingURL=style.css.map */

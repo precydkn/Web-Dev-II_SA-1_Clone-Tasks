@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Teko:wght@300..700&display=swap'); /*Teko font*/
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap'); /*Lato font*/
+
+$small : 16px;
+$tablet_large : 32px;
+$desktop_large : 48px;
+$button : 2em;
+$mobile_header: 2em;
+$tab-desk_header: 3em;
+$fsize : 1.5em;
+$fheading-btn : "Teko", sans-serif;
+$ftext : "Lato", sans-serif;
+$black : #070410;
+$blue : #231651;
+$sky : #4DCCBD;
+$yellow : #EEF36A;
+
+/*==========Formats common to all screen sizes==========*/
+body {
+    margin: 0;
+    background-color: $blue;/*#e9e9e9*/
+    font-family: $ftext;
+}
+
+/*==========NAVBAR==========*/
+nav,
+h2 {
+    font-family: $fheading-btn;
+} /*Teko font for navbar and headings*/
+nav {
+    background-color: $black;
+    display: flex;
+    align-items: center;
+    padding: $small;
+}
+nav a {
+    text-decoration: none;
+    color: white;
+}
+nav button {
+    padding: 0 $small;
+}
+nav a:hover {
+    color: $sky;
+} /*link color when hovered on*/
+nav button:hover {
+    background-color: $sky;
+    color: $yellow;
+}
+nav a:active {
+    color: $yellow;
+} /*link color when clicked*/
+button {
+    font-family: $fheading-btn;
+    border-radius: $small;
+}
+
+/*==========MAIN (movies)==========*/
+main {    
+    gap: $small;
+    margin: $small auto;
+}
+main img {
+    width: 100%;
+}
+.movie-box {
+    font-size: $fsize;
+    background-color: $sky;
+    border: 1px solid $black;
+}
+h2 {
+    margin: -5px 0 -30px;
+} /*lessen top/bot space*/
+.desc-container {
+    padding: $small;
+}
+.desc-container button {
+    font-size: $button;
+    padding: $small;
+    width: 100%;
+}
+.desc-container button:hover {
+    background-color: $yellow;
+    color: $blue;
+}
+
+/*ensure the buttons are at the bottom of div
+.m2 .movie-box {
+    display: flex;
+    flex-direction: column;
+}*/
+.m2 .movie-box,
+.m2 .desc-container,
+.mov23-box,
+#mov2 .desc-container,
+#mov3 .desc-container, 
+.m3 .desc-container {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+.m2 .desc-container button, 
+#mov2 button,
+#mov3 button, 
+.m3 .desc-container button {
+    margin-top: auto;
+}
+
+/*==========Formats exclusive to each MQs==========*/
+/*Small Mobile | 360px-540px (standard spacing: 16px)*/
+@media (max-width: 720px) {
+    nav {
+        justify-content: space-between;
+    }
+    nav div:first-child, 
+    nav div:last-child button {
+        font-size: 3em;
+    }
+    nav .genre {
+        display: none;
+    }
+    main {
+        display: flex;
+        flex-direction: column;
+    }
+    .m1, .movie-box {
+        display: block;
+    }
+    .m2 {
+        display: none;
+    }
+}
+
+/*Tablet | 720px-1024px (standard spacing: 32px)*/
+@media (min-width: 720px) {
+    nav {
+        display: grid;
+        grid-template-columns: auto 50% auto;
+        box-shadow: 0 6px white;
+    } /*equally divide spaces for watch.it, nav links, & button*/
+    nav .genre {
+        display: flex;
+        justify-content: space-between;
+    }
+    nav div:first-child, 
+    nav div:last-child button {
+        font-size: $tab-desk_header;
+    } /*big font-size for watch.it and button*/
+    nav div:last-child {
+        text-align: right;
+    } /*right align button*/
+
+    .m2 {
+        display: none;
+    }
+    main {
+        padding: $small;
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+    .movie-box {
+        box-shadow: 6px 6px $yellow;
+    }
+}
+
+/*Desktop | 1024px+ (large spacing: 48px)*/
+@media (min-width: 1024px) {
+    nav {
+        justify-content: space-between;
+    }
+    nav .genre {
+        justify-content: space-evenly;
+    }
+
+    main {
+        max-width: 900px;
+        display: flex;
+        flex-direction: column;
+    }
+    main img {
+        height: 100%;
+    }
+
+    /*movie 1*/
+    .m1 img {
+        height: 300px;    
+        object-fit: cover;
+        object-position: 0 -35px;
+    } /*crop movie poster and move it so title is better seen*/
+    .m1 .desc-container {
+        display: grid;
+        grid-template-columns: 75% 25%;
+        padding: $small;
+    } /*put movie info & button side by side*/
+    .m1 span {
+        display: block;
+    }
+
+    /*m2 (two movies container) + m3 grid format*/
+    .m2, 
+    .m3 {
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+    .m2 {
+        gap: $small;
+    } /*space between the side by side movies*/
+
+    #mov2, #mov3 {
+        display: none;
+    } /*hide ungrouped mov2 & mov3*/
+}
