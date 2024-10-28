@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Protest+Guerrilla&display=swap'); /*'Protest Guerrilla' font*/
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap'); /*'Josefin Sans' font*/
+
+/*==========Formats common to all screen sizes==========*/
+body {
+    margin: 0;
+    background-color: #e9e9e9;
+}
+h1, h2, h3 {
+    font-family: "Protest Guerrilla", sans-serif;
+}
+nav, p {
+    font-family: "Josefin Sans", sans-serif;
+}
+header, h1, h2, footer {
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+nav a {
+    text-decoration: none;
+    color: black;
+}
+
+section, footer {
+    background-color: white;
+    border: 2px black solid;
+}
+
+.albums-container img {
+    width: 100%;
+}
+
+.author-img img {
+    width: 200px;
+    border-radius: 100%;
+}
+
+/*==========Formats exclusive to each MQs==========*/
+/*Small Mobile | 360px-540px (standard spacing: 12px)*/
+@media only screen and (max-width: 540px) {
+    header img {
+        width: 80px;
+    }
+    header img, nav, .texts, .author {
+        margin: 12px;
+    } /*standard spacing for elements*/
+
+    h1, h2 {
+        font-size: 60px;
+        margin: -5px 0;
+    }
+    p, nav a {
+        font-size: 18px;
+    }
+
+    .texts span {
+        display: block;
+    } /*display in new line*/
+    .desc {
+        font-size: 22px;
+    }
+
+    .album-left {
+        display: none;
+    } /*hide featured album*/
+
+    .author-container {
+        display: flex;
+        flex-direction: column;
+    }
+    .author-img {
+        text-align: center;
+    }
+}
+
+/*Large Mobile | 540px-720px (standard spacing: 20px)*/
+@media only screen and (min-width: 540px) {
+    header img, nav, .texts, .author {
+        margin: 20px;
+    }
+    h1, h2 {
+        font-size: 60px;
+        margin: -5px 0;
+    }
+    p, nav a {
+        font-size: 22px;
+    }
+    .desc {
+        font-size: 26px;
+    }
+
+    .album-left {
+        display: none;
+    } /*hide featured album*/
+
+    .author-img {
+        text-align: center;
+    }
+}
+
+/*Tablet | 720px-1024px (standard spacing: 30px)*/
+@media (min-width: 720px) {
+    body {
+        padding: 30px 30px 0;
+    }
+    header img, nav, .texts, .author {
+        margin: 30px;
+    }
+    
+    .album-left {
+        display: none;
+    } /*hide featured album*/
+    .album-right {
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+    
+    .author-container {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+    }
+    .author-img img {
+        margin-left: 10px;
+    }
+}
+
+/*Desktop | 1024px+ (standard spacing: 50px)*/
+@media (min-width: 1024px) {
+    body {
+        padding: 50px 50px 0;
+    }
+    h1, h2, span {
+        text-align: left;
+    }
+    h1 {
+        font-size: 8vw;
+        margin-top: -10px;
+    }
+    h2, span {
+        font-size: 3vw;
+    }
+    nav a, p {
+        font-size: 1.5vw;
+    }
+    h1 span {
+        display: block;
+    }
+    .desc {
+        font-size: 1.8vw;
+        margin-right: calc(20% + 20vw); /*so width is *somewhat* aligned to title*/
+    }
+
+    header img, .author-container img {
+        width: 200px;
+    }
+    nav {
+        margin: 50px 0;
+    }
+    
+    .texts {
+        margin: 50px;
+    }
+    .col3 {
+        column-count: 3;
+    } /*3 text columns*/
+    /*lessen spacing between h2 and p*/
+    .col3 h2 {
+        margin: -10px 0;
+    }
+    .col3 p {
+        margin-bottom: -10px;
+    }
+
+    .albums-container {
+        display: grid;
+        grid-template-columns: auto auto;
+    } /*show featured album and album covers side by side*/
+    .album-left {
+        display: contents;
+    } /*show featured album*/
+
+    .author {
+        padding: 0 calc(14vw);
+    }
+    
+    footer {
+        padding: 10px 0;
+        background-color: #14181d;
+        color: white;
+    }
+}
