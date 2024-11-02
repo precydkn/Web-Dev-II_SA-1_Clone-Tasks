@@ -1,0 +1,40 @@
+body {
+    text-align: center;
+    background-color: black;
+} /*page*/
+
+#halloween {
+    width: 50%;
+} /*header img*/
+
+/*flex box, div, img*/
+.flex {
+    display: flex;
+}
+.flex div {
+    padding: 5px;
+    /*border: 2px pink dashed; remove after*/
+}
+.flex img {
+    width: 80%;
+    opacity: 0; /*imgs are hidden before animation starts*/
+    transition: 0.7s;
+}
+.flex img:hover {
+    width: 100%;
+} /*img become bigger on hover*/
+
+/*animations*/
+#m1 { animation: appear 2s 0.5s forwards; }
+#m2 { animation: appear 2s 1s forwards; }
+#m3 { animation: appear 2s 1.5s forwards; }
+#m4 { animation: appear 2s 2s forwards; }
+#m5 { animation: appear 2s 2.5s forwards; }
+#m6 { animation: appear 2s 3s forwards; }
+#m7 { animation: appear 2s 3.5s forwards; }
+#m8 { animation: appear 2s 4s forwards; }
+
+@keyframes appear {/*image will fade-in*/
+    from {opacity: 0; transform: translateY(50px);} /*starts image with 0 opacity and position lower than its final position*/
+    to {opacity: 100%; transform: translateY(0);} /*image will be fully opaque and at the intended position*/
+}
