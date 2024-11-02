@@ -56,10 +56,6 @@ button {
 }
 
 /*==========MAIN (movies)==========*/
-main {    
-    gap: $small;
-    margin: $small auto;
-}
 main img {
     width: 100%;
 }
@@ -84,11 +80,6 @@ h2 {
     color: $blue;
 }
 
-/*ensure the buttons are at the bottom of div
-.m2 .movie-box {
-    display: flex;
-    flex-direction: column;
-}*/
 .m2 .movie-box,
 .m2 .desc-container,
 .mov23-box,
@@ -118,6 +109,10 @@ h2 {
     }
     nav .genre {
         display: none;
+    }
+    main {    
+        gap: $small;
+        margin: $small auto;
     }
     main {
         display: flex;
@@ -154,12 +149,13 @@ h2 {
         display: none;
     }
     main {
-        padding: $small;
+        padding: $tablet_large;
+        gap: $tablet_large;
         display: grid;
         grid-template-columns: auto auto;
     }
     .movie-box {
-        box-shadow: 6px 6px $yellow;
+        box-shadow: 10px 10px $yellow;
     }
 }
 
@@ -174,6 +170,8 @@ h2 {
 
     main {
         max-width: 900px;
+        gap: $desktop_large;
+        margin: auto;
         display: flex;
         flex-direction: column;
     }
@@ -203,7 +201,7 @@ h2 {
         grid-template-columns: auto auto;
     }
     .m2 {
-        gap: $small;
+        gap: $desktop_large;
     } /*space between the side by side movies*/
 
     #mov2, #mov3 {
