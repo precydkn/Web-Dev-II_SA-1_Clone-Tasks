@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>26 HTML JavaScript</title>
+</head>
+<body>
+
+    <h2>A Taste of JavaScript</h2>
+    <h1 id="text_change">This heading will change style</h1>
+    <p><button type="button" onclick="myFunction()">Click Me!</button></p><br><br>
+
+    <h2>JavaScript can change attributes</h2>
+    <img id="heart" src="https://i.pinimg.com/564x/4e/dd/1b/4edd1bcc2338772216b5c7dc72bdba69.jpg" width="308">
+    <p>
+        <button type="button" onclick="heart(1)">Yellow</button>
+        <button type="button" onclick="heart(0)">Pink</button>
+    </p><br><br>
+
+    <h2>The HTML &ltnoscript> Tag</h2>
+    <noscript>Sorry, your browser does not support JavaScript!</noscript>
+    <p>The contents of the &ltnoscript> tag will be displayed if browser does not support JS.</p>
+
+    <script>
+        function myFunction() {
+            document.getElementById("text_change").style.fontSize = "60px"; document.getElementById("text_change").style.color = "blue";
+            document.getElementById("text_change").style.backgroundColor = "lightblue";
+        }
+
+        function heart (h) { 
+            var pic;
+            if (h == 0) {
+                pic = "https://i.pinimg.com/564x/4e/dd/1b/4edd1bcc2338772216b5c7dc72bdba69.jpg"
+            } else {
+                pic = "https://i.pinimg.com/564x/5c/2e/0b/5c2e0bf2c14f392974d18f1fda3d7ee2.jpg"
+            }
+            document.getElementById('heart').src = pic;
+        }
+    </script>
+</body>
+</html>

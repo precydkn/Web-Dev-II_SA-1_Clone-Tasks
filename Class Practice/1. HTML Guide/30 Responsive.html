@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>30 HTML Responsive Web Design</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        .left {
+            background-color: #7b98bd;
+            padding: 20px;
+            float: left;
+            width: 20%; /* The width is 20%, by default */
+        }
+        .main {
+            background-image:
+            url('https://i.pinimg.com/736x/33/95/37/33953761aeeead4ce15f4b2c62f2232d.jpg');
+            padding: 20px;
+            float: left;
+            width: 60%; /* The width is 60%, by default */
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .right {
+            background-color: #d8dfe5;
+            padding: 20px;
+        }
+        /* Use a media query to add a break point at 800px: */
+        @media screen and (max-width: 800px) {
+            .left, .main, .right {
+                width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
+            }
+        }
+    </style>
+</head>
+<body style="font-family: Arial;">
+
+    <h2>Responsive Images</h2>
+    <h3>Using the width Property</h3>
+    <img src="https://i.pinimg.com/564x/db/52/30/db5230cd8b083f133217e6d45f9f6f89.jpg" style="width:100%;">
+
+    <h3>Using the max-width Property</h3>
+    <img src="https://i.pinimg.com/564x/db/52/30/db5230cd8b083f133217e6d45f9f6f89.jpg" style="max-width: 100%; height: auto;">
+
+    <h2>Responsive Text Size</h2>
+    <h1 style="font-size:5vw;">Responsive Images and Text</h1>
+    <p style="font-size:3vw;">Resize the browser window to see how the text size scales.</p>
+
+    <h2>Media Queries</h2>
+    <div class="left"><p>Left Menu</p></div>
+    <div class="main"><p>Main Content</p></div>
+    <div class="right"> <p>Right Content</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>19 HTML Tables</title>
+    <style>
+        body {
+            font-family: Arial;
+        }
+        table {
+            border: 2px solid black;
+            border-radius: 10px;
+            border-style: ridge;
+            width: 100%;
+            background-color: #eee;
+        }
+        td, th {
+            border: 2px solid gray; border-radius: 10px; border-style: ridge;
+            text-align: left; padding: 8px;
+        }
+        th {
+            background-color: #f36313;
+        }
+        tr:nth-child(even) {
+            background-color: #c2cbd9;
+        }
+    </style>
+</head>
+<body>
+    <h1>HTML Tables</h1>
+    <table>
+        <colgroup>
+            <col span="1" style="background-color: lightyellow">
+        </colgroup>
+        <tr>
+            <th>Name</th>
+            <th>Role</th>
+            <th style="width: 50%">Abilities</th>
+        </tr>
+        <tr>
+            <td>Cassidy</td>
+            <td>Damage</td>
+            <td>Peacekeeper, Combat Roll, <b>Deadeye</b></td>
+        </tr>
+        <tr>
+            <td>Doomfist</td>
+            <td>Tank</td>
+            <td>Hand Cannon, Rocket Punch, Seismic Slam, Power Block, <b>Meteor Strike</b></td>
+        </tr>
+        <tr>
+            <td>Juno</td>
+            <td>Support</td>
+            <td>Mediblaster, Pulsar Torpedoes, Hyper Ring, Glide Boost, Martian Boots, <b>Orbital Ray</b></td>
+        </tr>
+    </table>
+
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>22 HTML Div Element</title> 
+</head>
+    <style>
+        body {
+            font-family: Arial;
+        }
+
+        .div {
+            color: lightgreen;
+            background-color: gray;
+            padding: 20px;
+        }
+
+        .div2 {
+            background-color: lightgoldenrodyellow;
+            width: 500px;
+            margin: auto;
+        }
+
+        div.mycontainer {
+            width:100%;
+            overflow:auto;
+            display: flex;
+        }
+        div.mycontainer div {
+            width:33%;
+            float:left;
+        }
+
+        div.mycontainer2 div {
+            width: 30%;
+            display: inline-block;
+        }
+
+        div.mycontainer3 {
+            display: flex;
+        }
+        .mycontainer3 > div {
+            width:33%;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: 33% 33% 33%;
+        }
+
+        .mycontainer div, .mycontainer2 div, .mycontainer3 div, .grid-container div {
+            padding: 20px;
+        }
+    </style>
+<body>
+
+    <h2>The &ltdiv> Element</h2>
+    Lorem Ipsum <div class="div">I am a div</div> dolor sit amet.<br><br>
+
+    <h2>&ltdiv> as a container + Center align a &ltdiv> element</h2>
+    <div class="div2">
+        <h2>This is a div</h2>
+        <p>Div contents</p>
+        <p>
+            .<br>
+            .<br>
+            .<br>
+        </p>
+    </div><br>
+
+    <h2>Aligning &ltdiv> elements side by side</h2>
+    <div class="mycontainer">
+        <div style="background-color: #FFF4A3;">
+            <h2>HTML</h2>
+            <p>Hypertext Markup Language is the standard markup language for documents designed to be displayed in a web browser. It defines the content and structure of web content.</p>
+        </div>
+        <div style="background-color: #FFC0C7;">
+            <h2>CSS</h2>
+            <p>Cascading Style Sheets is a style sheet language used for specifying the presentation and styling of a document written in a markup language such as HTML or XML.</p>
+        </div>
+        <div style="background-color: #D9EEE1;">
+            <h2>JS</h2>
+            <p>Javascript is a scripting or programming language that allows you to implement complex features on webpages.</p>
+        </div>
+    </div>
+
+    <h2>Inline Block</h2>
+    <div class="mycontainer2">
+        <div style="background-color: #FFF4A3;">
+            <h2>HTML</h2>
+            <p>Hypertext Markup Language is the standard markup language for documents designed to be displayed in a web browser. It defines the content and structure of web content.</p>
+        </div>
+        <div style="background-color: #FFC0C7;">
+            <h2>CSS</h2>
+            <p>Cascading Style Sheets is a style sheet language used for specifying the presentation and styling of a document written in a markup language such as HTML or XML.</p>
+        </div>
+        <div style="background-color: #D9EEE1;">
+            <h2>JS</h2>
+            <p>Javascript is a scripting or programming language that allows you to implement complex features on webpages.</p>
+        </div>
+    </div>
+
+    <h2>Flex</h2>
+    <div class="mycontainer3">
+        <div style="background-color: #FFF4A3;">
+            <h2>HTML</h2>
+            <p>Hypertext Markup Language is the standard markup language for documents designed to be displayed in a web browser. It defines the content and structure of web content.</p>
+        </div>
+        <div style="background-color: #FFC0C7;">
+            <h2>CSS</h2>
+            <p>Cascading Style Sheets is a style sheet language used for specifying the presentation and styling of a document written in a markup language such as HTML or XML.</p>
+        </div>
+        <div style="background-color: #D9EEE1;">
+            <h2>JS</h2>
+            <p>Javascript is a scripting or programming language that allows you to implement complex features on webpages.</p>
+        </div>
+    </div>
+
+    <h2>Grid</h2>
+    <div class="grid-container">
+        <div style="background-color: #FFF4A3;">
+            <h2>HTML</h2>
+            <p>Hypertext Markup Language is the standard markup language for documents designed to be displayed in a web browser. It defines the content and structure of web content.</p>
+        </div>
+        <div style="background-color: #FFC0C7;">
+            <h2>CSS</h2>
+            <p>Cascading Style Sheets is a style sheet language used for specifying the presentation and styling of a document written in a markup language such as HTML or XML.</p>
+        </div>
+        <div style="background-color: #D9EEE1;">
+            <h2>JS</h2>
+            <p>Javascript is a scripting or programming language that allows you to implement complex features on webpages.</p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>16 HTML Images: Picture Element</title>
+</head>
+<body style="font-family: Arial;">
+
+    <h2>Changing images according to viewport sizes</h2>
+    <picture>
+        <source media="(min-width: 1200px)" srcset="https://i.pinimg.com/564x/c2/8a/95/c28a9514709f95b7ee5301761dc9f32b.jpg">
+        <source media="(min-width: 800px)" srcset="https://i.pinimg.com/564x/ab/ce/3a/abce3a2b43a3e7fd5369bf80ce9c8078.jpg">
+        <img src="https://i.pinimg.com/564x/7f/ba/9e/7fba9efbe3336320ccf002778701a5c0.jpg" style="width:auto;">
+    </picture><br><br>
+
+    <h2>Image display compatibility</h2>
+    <p>The device will use the first image format it supports, and ignore the rest of the images. In this case, the third image source was displayed.</p>
+    <picture>
+        <source srcset="https://i.pinimg.com/originals/83/e3/e8/83e3e8db0ba717cd5bb5f5ac8c99fa90.gif">
+        <source srcset="img_girl.jpg">
+        <img src="https://www.pinterest.com/pin/8725793022031453/" alt="Newjeans bunny gif" style="width:auto;"> 
+    </picture>
+
+</body>
+</html>
+

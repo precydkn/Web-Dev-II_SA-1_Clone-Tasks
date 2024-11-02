@@ -1,0 +1,58 @@
+<!DOCTYPE html> 
+<html>
+<!--HTML Classes -->
+<head>
+    <title>23 HTML Class Attribute</title>
+    <style>
+        body {
+            font-family: Arial;
+        }
+        .white {        
+            color: green;
+            border: 2px solid black;
+            padding: 10px;
+        }
+        .green {
+            background-color: green;
+            color: white;
+            padding: 10px;
+        }
+        .center {
+            text-align: center;
+        }
+    </style> 
+</head>
+<body>
+
+    <h2>Multiple Classes + Different Elements Can Share Same Class</h2>
+    <h3 class="green center">
+        This heading has the classes, "green" and "center".
+    </h3>
+    <p class="white center">This paragraph has the classes, "white" and "center".</p>
+    <p class="green">This paragraph also has the class "green" but not "center".</p><br><br>
+
+    
+    <h2>Use of The class Attribute in JavaScript</h2>
+    <p>Click the button to hide all elements with class name "city":</p>
+
+    <button onclick="myFunction()">Hide elements</button>
+
+    <h2 class="city">London</h2>
+    <p>London is the capital of England.</p>
+
+    <h2 class="city">Paris</h2>
+    <p>Paris is the capital of France.</p>
+
+    <h2 class="city">Tokyo</h2>
+    <p>Tokyo is the capital of Japan.</p>
+
+    <script>
+        function myFunction() {
+          var x = document.getElementsByClassName("city");
+          for (var i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+          }
+        }
+    </script>
+</body>
+</html>
