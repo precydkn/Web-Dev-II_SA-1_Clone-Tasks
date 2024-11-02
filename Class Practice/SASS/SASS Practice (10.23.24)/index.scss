@@ -1,0 +1,20 @@
+$c1 : brown;
+$c2 : pink;
+$s1 : 1.5em;
+$s2 : 1em;
+
+.heading1 {
+    color: $c1;
+}
+
+.heading2 {
+    color: $c2;
+}
+
+.big {
+    font-size: $s1;
+}
+
+.small {
+    font-size: $s2;
+}
