@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap'); /*"Roboto Condensed"*/
+@import url('https://fonts.googleapis.com/css2?family=Sixtyfour+Convergence&display=swap'); /*"Sixtyfour Convergence"*/
+@import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Guides:wght@400..700&display=swap'); /*"Edu AU VIC WA NT Guides"*/
+
+body {
+    text-align: center;
+}
+.normal {
+    font-family: normal;
+}
+h1 {
+    font-family: "Roboto Condensed", sans-serif;
+}
+h2 {
+    font-family: "Sixtyfour Convergence", sans-serif;
+}
+h3 {
+    font-family: "Edu AU VIC WA NT Guides", cursive;
+}
