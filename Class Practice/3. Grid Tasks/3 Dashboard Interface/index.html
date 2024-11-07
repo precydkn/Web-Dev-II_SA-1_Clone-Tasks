@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Interface</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!--3. Dashboard Interface: Build a simple dashboard layout with a header, sidebar, and main content area using CSS Grid. Include widgets for statistics, recent activity, and notifs.-->
+    <h1>Dashboard Interface</h1>
+    <div class="dash-container">
+        <div class="side">
+            <div class="clock"></div>
+            <div class="calendar">
+                <table>
+                    <tr class="month">
+                        <th colspan="7">October</th>
+                    </tr>
+                    <tr><!--days of the week-->
+                        <th>sun</th>
+                        <th>mon</th>
+                        <th>tue</th>
+                        <th>wed</th>
+                        <th>thu</th>
+                        <th>fri</th>
+                        <th>sat</th>
+                    </tr>
+                    <tr><!--week1-->
+                        <td></td>
+                        <td></td>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>3</td>
+                        <td>4</td>
+                        <td>5</td>
+                    </tr>
+                    <tr><!--week2-->
+                        <td>6</td>
+                        <td>7</td>
+                        <td>8</td>
+                        <td>9</td>
+                        <td>10</td>
+                        <td>11</td>
+                        <td>12</td>
+                    </tr>
+                    <tr><!--week3-->
+                        <td>13</td>
+                        <td>14</td>
+                        <td>15</td>
+                        <td>16</td>
+                        <td>17</td>
+                        <td>18</td>
+                        <td>19</td>
+                    </tr>
+                    <tr><!--week4-->
+                        <td>20</td>
+                        <td>21</td>
+                        <td>22</td>
+                        <td>23</td>
+                        <td>24</td>
+                        <td>25</td>
+                        <td>26</td>
+                    </tr>
+                    <tr><!--week5-->
+                        <td>27</td>
+                        <td>28</td>
+                        <td>29</td>
+                        <td>30</td>
+                        <td>31</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="qlinks">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="">Minerva</a></li>
+                    <li><a href="">Code Lab II Drive</a></li>
+                    <li><a href="">Game Dev Drive</a></li>
+                    <li><a href="">Web Dev II Drive</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="header"></div>
+
+        <div class="main2">
+            <div class="todo-notif">
+                <div class="todo">
+                    <h3>✩ To-Do! ✩</h3>
+                    <div class="task">
+                        <div class="checkbox"></div>
+                        <div>renew ID</div>
+                    </div>
+                    <div class="task">
+                        <div class="checkbox"></div>
+                        <div>Download Unity</div>
+                    </div>
+                    <div class="task">
+                        <div class="checkbox"></div>
+                        <div>Play "The Swapper" part</div>
+                    </div>
+                    <div class="task">
+                        <div class="checkbox"></div>
+                        <div>Flexbox Tasks</div>
+                    </div>
+                    <div class="task">
+                        <div class="checkbox"></div>
+                        <div>Grid Tasks</div>
+                    </div>
+                </div>
+                <div class="notif">
+                    <h3>! Notifications !</h3>
+                    <div class="app">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgd9OGb8ZLEl4mSzosTT14DnUYvnB0aDDMaA&s" alt="gmail logo">
+                        <p><b>Sololearn</b><br>What will you learn today, Precyleigh?</p>
+                    </div>
+                    <div class="app">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/YouTube_social_white_square_%282017%29.svg/2048px-YouTube_social_white_square_%282017%29.svg.png" alt="youtube logo">
+                        <p><b>Youtube</b><br>Bro Code: C# Full Course for free 🚀</p>
+                    </div>
+                    <div class="app">
+                        <img src="https://static.vecteezy.com/system/resources/previews/016/716/480/non_2x/whatsapp-icon-free-png.png" alt="whatsapp logo">
+                        <p><b>Sololearn</b><br>What will you learn today, Precyleigh?</p>
+                    </div>
+                    <p class="view">View all</p>
+                </div>
+            </div>
+            <div class="recent">
+                <h3>⟡ Recent Activities ⟡</h3>
+                <div class="acts-container">
+                    <div class="act act1">
+                        <div class="overlay">
+                            <p><b>Sololearn</b></p>
+                        </div>
+                    </div>
+                    <div class="act act2">
+                        <div class="overlay">
+                            <p><b>Youtube</b></p>
+                        </div>
+                    </div>
+                    <div class="act act3">
+                        <div class="overlay">
+                            <p><b>Google Drive</b></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="stats">
+                <h3>Task Overview</h3>
+                <div class="stats-container">
+                    <div class="stat"><span>20</span><br>Projects</div>
+                    <div class="stat"><span>9</span><br>In Progress</div>
+                    <div class="stat"><span>11</span><br>Done</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
