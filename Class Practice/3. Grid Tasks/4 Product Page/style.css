@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Faculty+Glyphic&display=swap'); /*Faculty Glyphic font*/
+body {
+    margin: 0;
+    background-color: #ededed;
+    font-family: "Faculty Glyphic", sans-serif;
+}
+h1 {
+    text-align: center;
+}
+
+.p-header {
+    height: 400px;
+    background-image: url('img/Ronit-Baranga.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0% 83%; /*move image higher to showcase her work*/
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    font-size: 50px;
+    color: #687dae;
+}
+.products {
+    font-family: Helvetica, sans-serif;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 20px;
+    margin: 10px;
+}
+.products div img {
+    width: 100%;
+    border-radius: 10px;
+}
+.products div p {
+    padding: 0 20px;
+}
+.price, .desc {
+    color: grey;
+}
+.desc {
+    font-style: italic;
+    font-size: 15px;
+}
+
+/*MQs for responsiveness*/
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .p-header {
+        height: 130px;
+        font-size: large;
+    }
+    .products {
+        grid-template-columns: auto auto;
+        gap: 10px;
+    }
+    .products div img {
+        border-radius: 5px;
+    }
+    .products div p {
+        padding: 0 10px;
+    }
+    .desc {
+        font-size: medium;
+    }
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (max-width: 992px) {
+    .products {
+        grid-template-columns: auto auto auto;
+        gap: 15px;
+    }
+    .p-header {
+        height: 250px;
+        font-size: 30px;
+    }
+}
