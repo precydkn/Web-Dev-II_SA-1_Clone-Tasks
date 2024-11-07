@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Faculty+Glyphic&display=swap'); /*DM Serif Text font*/
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "DM Serif Text", serif;
+    background-color: #e8e8ea;
+}
+
+header {
+    font-weight: bold;
+} /*navbar text*/
+#i-logo {
+    height: 40px;
+} /*illit logo*/
+#header {
+    width: 100%;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute; /*so navbar is on top of img*/
+    padding: 30px;
+    width: 100%;
+    /*border: 1px pink solid; remove after*/
+}
+nav a {
+    text-decoration: none;
+    color: black;
+    margin: 0 14px;
+    /*border: 1px pink solid; remove after*/
+}
+nav a:hover {
+    color: #c8adda;
+    text-decoration: underline;
+    transition-duration: 0.3s;
+}
+
+footer {
+    margin-top: -5px;
+    padding: 30px 10px;
+    text-align: center;
+    background-image: url('img/footer.png');
+    background-size: contain;
+}
+footer img {
+    height: 50px;
+    margin: 0 10px;
+}
+/*change icons to colored on hover*/
+footer #tiktok:hover {
+    content: url('img/TikTok\ hover.png');
+}
+footer #ig:hover {
+    content: url('img/Instagram\ hover.png');
+}
+footer #yt:hover {
+    content: url('img/YouTube\ hover.png');
+}
