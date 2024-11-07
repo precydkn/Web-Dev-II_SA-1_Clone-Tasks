@@ -1,31 +1,26 @@
-* {
-    box-sizing: border-box;
-}
 body {
     margin: 0;
     padding: 0;
     background-color: aquamarine;
-    overflow-x: hidden; /*prevent horizontal scroll*/
-}
-h1 {
+    font-weight: bold;
+    font-family: Helvetica, sans-serif;
     text-align: center;
+    overflow-x: hidden; /*disable horizontal scroll*/
 }
 
 .navbar-bg {
     width: 100%;
     height: 100px;
-    object-fit: cover; /*prevent stretching of img because of adjusted height*/
+    object-fit: cover; /*so image is not squished when resized*/
 }
 nav {
     width: 100%;
-    height: 100px;
+    height: 40px;
     padding: 30px 50px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
     position: absolute; /*so navbar is on top of img*/
-    font-weight: bold;
-    font-family: Helvetica, sans-serif;
 
     /*add a blurry overlay to blur bg img*/
     background-color: rgba(0, 21, 255, 0.1);
@@ -34,13 +29,14 @@ nav {
 nav a {
     text-decoration: none;
     color: #95e3bb;
-    padding: 3px 5px;
+    padding: 10px 15px;
+    width: 70px;
 }
 nav a:hover {
-    padding: 3px 5px;
+    padding: 10px 15px;
     color: #13B370;
-    font-size: larger;
-    border: 2px #13B370 solid;
     border-radius: 3px;
+    box-shadow: 0 0 5px #95e3bb;
+    font-size: larger;
     transition: 0.2s;
 }
