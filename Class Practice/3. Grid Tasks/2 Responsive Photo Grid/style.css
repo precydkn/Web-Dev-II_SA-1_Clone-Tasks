@@ -1,0 +1,44 @@
+body {
+    background-color: #E0BBE4;
+    margin: 0;
+    text-align: center;
+}
+
+.pg-container {
+    margin: 10px;
+}
+.pg-container img {
+    width: 100%;
+    border-radius: 10px;
+    margin: 5px 0;
+}
+
+/*MQs for responsiveness*/
+/*small to large mobiles: 2 cols*/
+@media screen and (max-width: 720px) {
+    .pg-container {
+        column-count: 2;
+    }
+}
+/*tablet: 3 cols*/
+@media screen and (min-width: 720px) {
+    .pg-container {
+        column-count: 3;
+    }
+}
+/*desktop to larger desktops: 4-6 cols*/
+@media screen and (min-width: 1024px) {
+    .pg-container {
+        column-count: 4;
+    }
+}
+@media screen and (min-width: 1280px) {
+    .pg-container {
+        column-count: 5;
+    }
+}
+@media screen and (min-width: 1440px) {
+    .pg-container {
+        column-count: 6;
+    }
+}
