@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap'); /*Sour Gummy font*/
+
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('bg.jpg');
+    font-family: "Sour Gummy", sans-serif;
+    text-align: center;
+    /*ensure content is centered vertically*/
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+}
+
+.todo-container {
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
+    width: 300px;
+    padding: 30px;
+    margin: auto;
+    background-color: white;
+    border: 2px black solid;
+    border-radius: 20px;
+}
+.task {
+    display: flex;
+    margin-bottom: 14px;
+}
+.checkbox {
+    border: 2px black solid;
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    text-align: center;
+}
+.t {
+    position: relative;
+    padding-right: 30px; /*space for the delete icon*/
+    pointer-events: none; /*so clicking a .t won't delete the itself (::after will be responsible for deleting)*/
+}
+.t::after {
+    content: '🗑';
+    position: absolute;
+    right: 0; /*placed on right of text*/
+    line-height: 1.3;
+    pointer-events: all; /*so clicking 🗑 will delete the task*/
+    cursor: pointer; /*show that icon is clickable*/
+}
+
+/*add check on checkbox and strikthrough on text*/
+.checkbox.checked::before {
+    content: '✓';
+    line-height: 0.2;
+}
+.task.checked .t{
+    text-decoration: line-through;
+    color: gray;
+    font-style: italic;
+}
+.task.checked .t::after {
+    text-decoration: none;
+    font-style: normal;
+}
