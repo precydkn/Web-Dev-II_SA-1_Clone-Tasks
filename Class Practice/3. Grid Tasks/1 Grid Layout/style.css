@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Zetta:wght@100..900&display=swap'); /*Lexend Zetta font*/
+
+body {
+    background-color: #f7ffc1;
+    margin: 0;
+    font-family: "Lexend Zetta", sans-serif;
+    text-align: center;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    font-size: 30px;
+    font-weight: bold;
+}
+.grid-container div {
+    border: 2px solid black;
+    display: grid;
+    align-items: center;
+    padding: 30px;
+    height: 500px;
+}
+.sidebar {
+    background-color: #c1ffc9;
+}
+.main {
+    grid-column: 2 / span 3;
+    background-color: #c9c1ff;
+}
