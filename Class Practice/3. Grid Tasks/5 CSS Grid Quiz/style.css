@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap'); /*'Fredoka' font*/
+
+body {
+    margin: 0;
+    font-family: "Fredoka", system-ui;
+    background-image: url('bg.png');
+}
+h1, h2, .ans ol {
+    text-align: center;
+}
+
+.quiz {
+    /*ensure content is centered vertically*/
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+}
+.quiz-container {
+    background-color: #a0f2cd;
+    border: 3px solid #5ea585;
+    border-radius: 30px;
+    margin: 0 10px;
+    padding: 0 20px 20px;
+}
+.qs {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    gap: 10px;
+}
+.qs div {
+    padding: 10px;
+    border: 1px solid #5ea585;
+    border-radius: 10px;
+    background-color: #c2fae1;
+}
+.ans ol {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 10px;
+    list-style-type: upper-alpha;
+    list-style-position: inside;
+}
+.ans ol li {
+    padding: 10px 0;
+    background-color: #386350;
+    color: white;
+    border-radius: 10px;
+}
