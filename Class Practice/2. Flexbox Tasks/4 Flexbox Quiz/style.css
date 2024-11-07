@@ -1,0 +1,52 @@
+/*@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap'); Comic Neue font*/
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap'); /*Lexend font*/
+/*#02094d*/
+body {
+    margin: 0;
+    font-family: "Lexend", sanswers-serif;
+    
+    background-image: url('bg.png');
+}
+h1, h2 {
+    text-align: center;
+}
+
+.body {
+    /*ensure content is centered vertically*/
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+}
+.quiz-container {
+    background-color: #5550d6;
+    border: 3px solid #413ea7;
+    border-radius: 30px;
+    margin: 0 30px;
+}
+.questions div {
+    width: 250px;
+    padding: 10px;
+    border: 1px #eff9ff solid;
+    border-radius: 10px;
+    background-color: #727bc9;
+    color: #02094d;
+}
+.questions, .answers, ol {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+.answers ol li {
+    list-style-position: inside;
+    list-style-type: upper-alpha;
+    padding: 10px 20px;
+    color: white;
+    background-color: #02094d;
+    border: 1px solid white;
+    border-radius: 10px;
+}
+.answers ol {
+    margin: -5px 0 30px;
+}
