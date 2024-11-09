@@ -40,6 +40,12 @@ section, footer {
     border-radius: 100%;
 }
 
+footer {
+    padding: 10px 0;
+    background-color: #14181d;
+    color: white;
+}
+
 /*==========Formats exclusive to each MQs==========*/
 /*Small Mobile | 360px-540px (standard spacing: 12px)*/
 @media only screen and (max-width: 540px) {
@@ -187,11 +193,5 @@ section, footer {
 
     .author {
         padding: 0 calc(14vw);
-    }
-    
-    footer {
-        padding: 10px 0;
-        background-color: #14181d;
-        color: white;
     }
 }
