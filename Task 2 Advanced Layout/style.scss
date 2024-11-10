@@ -132,7 +132,7 @@ h2 {
         display: grid;
         grid-template-columns: auto 50% auto;
         box-shadow: 0 6px white;
-    } /*equally divide spaces for watch.it, nav links, & button*/
+    } /*equally divide spaces for watch.it, genres, & button*/
     nav .genre {
         display: flex;
         justify-content: space-between;
@@ -156,6 +156,14 @@ h2 {
     }
     .movie-box {
         box-shadow: 10px 10px $yellow;
+    }
+    .m1, #mov2, #mov3, .m3 {
+        .desc-container span {
+            display: block;
+        }
+        button {
+            padding: 0;
+        }
     }
 }
 
@@ -207,4 +215,11 @@ h2 {
     #mov2, #mov3 {
         display: none;
     } /*hide ungrouped mov2 & mov3*/
+
+    .m3 .desc-container span {
+        display: inline;
+    }
+    .desc-container button {
+        padding: $small;
+    }
 }

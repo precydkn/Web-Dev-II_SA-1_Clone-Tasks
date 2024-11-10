@@ -3,7 +3,7 @@
 /*==========Formats common to all screen sizes==========*/
 body {
   margin: 0;
-  background-color: #231651; /*#e9e9e9*/
+  background-color: #231651;
   font-family: "Lato", sans-serif;
 }
 
@@ -92,7 +92,7 @@ h2 {
 }
 
 /*==========Formats exclusive to each MQs==========*/
-/*Small Mobile | 360px-540px (standard spacing: 16px)*/
+/*Mobile | 360px-720px (standard spacing: 16px)*/
 @media (max-width: 720px) {
   nav {
     justify-content: space-between;
@@ -125,7 +125,7 @@ h2 {
     display: grid;
     grid-template-columns: auto 50% auto;
     box-shadow: 0 6px white;
-  } /*equally divide spaces for watch.it, nav links, & button*/
+  } /*equally divide spaces for watch.it, genres, & button*/
   nav .genre {
     display: flex;
     justify-content: space-between;
@@ -148,6 +148,12 @@ h2 {
   }
   .movie-box {
     box-shadow: 10px 10px #EEF36A;
+  }
+  .m1 .desc-container span, #mov2 .desc-container span, #mov3 .desc-container span, .m3 .desc-container span {
+    display: block;
+  }
+  .m1 button, #mov2 button, #mov3 button, .m3 button {
+    padding: 0;
   }
 }
 /*Desktop | 1024px+ (large spacing: 48px)*/
@@ -196,4 +202,10 @@ h2 {
   #mov2, #mov3 {
     display: none;
   } /*hide ungrouped mov2 & mov3*/
+  .m3 .desc-container span {
+    display: inline;
+  }
+  .desc-container button {
+    padding: 16px;
+  }
 }/*# sourceMappingURL=style.css.map */
